@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="SOW Templates" name="description">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>SOW Templates</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="/manifest.json" rel="manifest"><!-- icon ios support  -->
+	<link href="/images/icons/icon-96.png" rel="apple-touch-icon">
+	<meta content="#1C2C5B" name="apple-mobile-web-app-status-bar">
+	<meta content="#1C2C5B" name="theme-color">
+</head>
+<body>
+	<header>
+		<a class="hide-on-large-only" href="/index.html"><img alt="SOW templates logo" class="small-sc-img" src="/images/sow.png"></a> <!-- Web Share Api share button on small screen -->
+		 <button class="sharebtnsmall"><i class="material-icons right">share</i>
+		<p class="hide-on-med-and-down">Share</p></button>
+	</header><!-- Small & medium screen navigation -->
+	<nav class="nav-bottom hide-on-large-only">
+		<ul>
+			<li>
+				<a class="current" href="/index.html"><i class="material-icons">home</i></a>
+			</li>
+			<li>
+				<a href="/pages/library.html"><i class="material-icons">view_quilt</i></a>
+			</li>
+			<li>
+				<a href="/pages/favourites.html"><i class="material-icons">favorite</i></a>
+			</li>
+		</ul>
+	</nav><!-- Large screen navigation  -->
+	<nav class="top-nav hide-on-med-and-down">
+		<a href="/index.html"><img class="large-sc-img" src="/images/sow.png"></a>
+		<ul class="right" id="fontheight">
+			<li class="current">
+				<a href="/index.html"><i class="material-icons left">home</i></a><a href="/index.html">Home</a>
+			</li>
+			<li>
+				<a href="/pages/library.html"><i class="material-icons left">view_quilt</i></a><a href="/pages/library.html">Templates</a>
+			</li>
+			<li>
+				<a href="/pages/favourites.html"><i class="material-icons left">favorite</i></a><a href="/pages/favourites.html">Favourites</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container">
+		<!-- Offline notificaton triggered by network connection -->
+		<div class="offline-notification">
+			It looks like you're offline.
+		</div>
+		<!-- Instructions HTML -->
+		<h2 class="flow-text center">SOW templates is a library with a whole host of FREE creative templates waiting to be used. We offer both downloadable and printable templates, depending on your preferences.</h2>
+		<div class="row">
+			<div class="col s12 m6 l4">
+				<div class="card-panel center">
+					<a href="/pages/library.html"><img alt="Click on the template button demo" class="demo-image1" src="images/demo/demo1.png"></a><br>
+					<span class="black-text">Simply click the template icon to open our selection of downloadable templates</span>
+				</div>
+			</div>
+			<div class="col s12 m6 l4">
+				<div class="card-panel center">
+					<img alt="Browse through and download demo" class="demo-img2" src="images/demo/demo2.png"><br>
+					<span class="black-text">Broswe through our wide range of templates & choosen the one you like. Once you find the perfect one, click 'download'.</span>
+				</div>
+			</div>
+			<div class="col s12 m6 l4">
+				<div class="card-panel center">
+					<img alt="Use template in varying editable software demo" class="demo-image3" src="images/demo/demo3.png"><br>
+					<span class="black-text">Once the template is downloaded, our templates can be opened in word, preview, adobe acrobat or edited in the broswer.</span>
+				</div>
+			</div>
+		</div>
+  </div>
+  <!-- Web Sahre API HTML -->
+	<div class="overlay"></div>
+	<div class="share">
+		<h2>Show us off to your friends</h2><!-- sharer.js code source: https://ellisonleao.github.io/sharer.js/ -->
+    	<button class="button social1" data-hashtag="SOW" data-sharer="facebook" data-url="https://sow-templates.web.app">Share on Facebook</button> 
+		<button class="button social2" data-hashtags="SOW" data-sharer="twitter" data-title="Sow Templates"data-url="https://sow-templates.web.app">Share on Twitter</button>
+		<button class="button social3" data-sharer="linkedin" data-url="https://sow-templates.web.app">Share on Linkedin</button>
+	</div>
+	<!-- Javascript for Web Sahre API, placed at the bottom of the body tag to improve display speed -->
+	<!-- Source: https://w3c.github.io/web-share/ & -->
+	<script>
+	const shareButton = document.querySelector('button');
+	const overlay = document.querySelector('.overlay');
+	const shareModal = document.querySelector('.share');
+	const title = window.document.title; //getting the title of the current page 
+	const url = window.document.location.href; //getting the url of the current page 
+	shareButton.addEventListener('click', () => { //adds event listener to share button
+		if (navigator.share) { //checks if the device has access to web share api
+			navigator.share({ //Accessing the web share API
+				title: '${title}',
+				url: 'https://sow-templates.web.app/',
+			}).then(() => {
+				showMessage('Thanks for sharing!');
+			}).catch(console.error); //catches any errors
+		} else { //showing the share options 
+			overlay.classList.add('show-share');
+			shareModal.classList.add('show-share');
+		}
+	})
+	//removing the overlay by clicking off 
+	overlay.addEventListener('click', () => {
+		overlay.classList.remove('show-share'); //removes class from share buttons 
+		shareModal.classList.remove('show-share'); //removes class from overlay 
+	})
+	</script>
+	<!-- Linked script fileds -->
+	<script src="/java/all.js">
+	</script>
+	<script src="/pwa.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js">
+	</script>
+</body>
+</html>
+
+        
+
+
+
