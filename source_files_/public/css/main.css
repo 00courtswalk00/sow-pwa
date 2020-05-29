@@ -1,0 +1,325 @@
+body {
+	background-color: white;
+	margin-bottom: 5rem;
+	margin-top: 5rem;
+	color: #696969;
+	z-index: -1;
+	overscroll-behavior: contain; /* Prevents the pull to refresh with the PWA is downloaded onto home screen */
+	
+}
+
+.container2 {
+	padding-top: 10%;
+}
+
+h1 {
+	font-size: 16px;
+	text-align: center;
+	margin: 0;
+	padding-bottom: 0.4rem;
+}
+
+li {
+	list-style-type: none;
+}
+
+.downloadbtn {
+	color: white;
+	background-color: black;
+	margin-top: 10px;
+	width: 50%;
+}
+
+.heart {
+	color: crimson;
+}
+
+form {
+	padding-top: 1rem;
+	padding-bottom: 1.5rem;
+}
+
+img {
+	width: 100%;
+}
+
+.demo-image1 {
+	width: 50%;
+}
+
+.black-text {
+	font-weight: 700;
+}
+
+.favetext {
+	font-size: 16px;
+	padding-top: 2rem;
+}
+
+button:focus {
+	outline: none;
+	background-color: transparent;
+}
+
+button:hover {
+	outline: medium;
+}
+
+/* Web Share API */
+
+button {
+	border: 0;
+	background-color: transparent;
+	text-decoration: none;
+	float: right;
+	border-radius: 4px;
+}
+
+.overlay {
+	opacity: 1;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+}
+
+.share {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 30%;
+	margin: auto;
+	width: 90%;
+	z-index: 1;
+	padding: 1em;
+	background: white;
+	font-size: 15px;
+}
+
+.share h2 {
+	font-size: 18px;
+	text-align: center;
+}
+
+.social1,
+.social2,
+.social3 {
+	border: 0;
+	padding: .8em 1.2em;
+	margin: 0.2em;
+	width: 30%;
+	cursor: pointer;
+	background-color: #2D4862;
+	color: white;
+}
+
+.social1, 
+.social3, 
+.social2:focus {
+	background-color: #f0c9ce;
+}
+
+.share,
+.overlay {
+	display: none;
+}
+
+.show-share {
+	display: block;
+}
+
+.install,
+.sharebtnsmall {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+}
+
+.sharebtnsmall {
+	padding: 1.5rem;
+}
+
+/* Offline notification  */
+
+.offline-notification {
+	transition: transform 0.3s;
+	transform: translateY(-110%) translateX(-50%);
+	position: fixed;
+	left: 50%;
+	background: #222;
+	color: white;
+	text-align: center;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+	font-size: 11px;
+	letter-spacing: 0.1rem;
+	font-weight: 600;
+}
+
+.offline-notification a {
+	color: white;
+}
+
+.offline-notification a:visited {
+	color: white;
+}
+
+.offline-msg {
+	display: none;
+}
+
+.offline .offline-notification {
+	transition: transform 0.3s;
+	transform: translateY(0) translateX(-50%);
+}
+
+.offline .online-msg {
+	display: none;
+}
+
+.offline .offline-msg {
+	display: block;
+}
+
+/* Small & medium screen card */
+
+.card-image {
+	z-index: 0;
+}
+
+.card .card-reveal {
+	z-index: 0;
+	padding: 10px;
+}
+
+.card .card-content {
+	padding: 9px;
+}
+
+.material-icons {
+	font-size: 10px;
+}
+
+.card .card-content .card-title {
+	font-weight: 500;
+	line-height: 24px;
+	font-size: 18px;
+}
+
+/* Header top of application (small screen) */
+
+.small-sc-img {
+	margin: 0.7rem auto 0.5rem auto;
+	display: block;
+	width: 20%;
+}
+
+header {
+	top: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+	z-index: 1;
+	background-color: white;
+	padding-top: 0.2rem;
+}
+
+.back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1.5rem;
+	color: black;
+}
+
+i.right,
+i.left {
+	margin: 0;
+}
+
+/* Small screen navigation */
+
+.nav-bottom {
+	overflow: hidden;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.current {
+	background-color: rgb(34, 63, 90);
+}
+
+.nav-bottom {
+	background-color: #2D4862;
+}
+
+.nav-bottom ul {
+	text-align: center;
+}
+
+.nav-bottom ul li {
+	display: inline;
+	float: none;
+}
+
+.nav-bottom ul li a {
+	display: inline-block;
+	width: 25%;
+}
+
+/* This code applies to screens of 750px and larger. */
+
+@media only screen and (min-width: 750px) {
+	.flow-text {
+		padding-top: 2rem;
+	}
+	.favetext {
+		padding-top: 3rem;
+		font-size: 20px;
+	}
+	.sharebtnsmall {
+		padding: 2rem;
+	}
+	.large-sc-img {
+		width: 8%;
+		margin: 1rem;
+	}
+	.top-nav {
+		background-color: #2D4862;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+		padding-top: 0.2rem;
+	}
+	nav i.material-icons {
+		padding: 3px;
+	}
+	.top-nav li {
+		padding: 0 20px 0 0;
+	}
+	.top-nav ul a {
+		display: inline;
+		padding: 0;
+	}
+	#fontheight {
+		line-height: 58px;
+	}
+}
+
+/* This code applies to screens of 985px and larger. */
+
+@media only screen and (min-width: 985px) {
+	.sharebtnsmall {
+		padding-top: 6rem;
+		padding-right: 3rem;
+	}
+}

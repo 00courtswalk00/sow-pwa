@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="SOW Templates" name="description">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>SOW Templates</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="/manifest.json" rel="manifest"><!-- icon ios support  -->
+	<link href="/images/icons/icon-96.png" rel="apple-touch-icon">
+	<meta content="#1C2C5B" name="apple-mobile-web-app-status-bar">
+	<meta content="#1C2C5B" name="theme-color">
+</head>
+<body>
+	<header>
+		<a class="hide-on-large-only" href="/index.html"><img class="small-sc-img" src="/images/sow.png" alt="Sow templates logo"></a>
+		<h1>Templates</h1><a href="/index.html"><i class="back material-icons">keyboard_backspace</i></a> <button class="install" hidden=""><i class="material-icons right">vertical_align_bottom</i>Install</button>
+	</header><!-- Small & medium screen navigation -->
+	<nav class="nav-bottom hide-on-large-only">
+		<ul>
+			<li>
+				<a href="/index.html"><i class="material-icons">home</i></a>
+			</li>
+			<li>
+				<a class="current" href="/pages/library.html"><i class="material-icons">view_quilt</i></a>
+			</li>
+			<li>
+				<a href="/pages/favourites.html"><i class="material-icons">favorite</i></a>
+			</li>
+		</ul>
+	</nav><!-- Large screen navigation  -->
+	<nav class="top-nav hide-on-med-and-down">
+		<a href="/index.html"><img class="large-sc-img" src="/images/sow.png"></a>
+		<ul class="right" id="fontheight">
+			<li>
+				<a href="/index.html"><i class="material-icons left">home</i></a><a href="/index.html">Home</a>
+			</li>
+			<li class="current">
+				<a href="/pages/library.html"><i class="material-icons left">view_quilt</i></a><a href="/pages/library.html">Templates</a>
+			</li>
+			<li>
+				<a href="/pages/favourites.html"><i class="material-icons left">favorite</i></a><a href="/pages/favourites.html">Favourites</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="container">
+		<!-- Offline Notification  -->
+		<div class="offline-notification">
+			It looks like you're offline.
+		</div>
+		<!-- Search Bar HTML -->
+		<form id="searchbar">
+			<input type="text" onfocus="this.value=''" placeholder="Search templates..." onkeypress="return block()" aria-label="Search"/>
+			<label for="searchbar"></label>
+		</form>
+		<!-- Template HTML -->
+	 	<div id="temp-name">
+			<div class="row">
+				<div class="col s6 m4 l4">
+					<div class="card hoverable">
+						<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="/images/map.png" alt="Pink mind map"></div>
+						<div class="card-content">
+							<ul>
+								<li>
+									<span class="card-title activator grey-text text-darken-4">Pink Mind Map</span> <button><i class="heart material-icons right">favorite_border</i></button>
+									<p class="activator">More info<i class="activator hoverable material-icons left">keyboard_arrow_down</i></p> 
+								</li>
+							</ul>
+						</div>
+						<div class="card-reveal">
+							<ul>
+								<li> <span class="card-title grey-text text-darken-4">Pink Mind Map<i class="material-icons right">close</i></span></li>
+								<p>This template is good for a colourful simple mind map. With 8 input fields, ideas can be explored. This Template works best in Adobe Acrobat.</p>
+								<a href="/pdf/map.pdf" download><button class="downloadbtn"><i class="material-icons"> file_download</i></button></a> 
+							</ul> 
+						</div>
+					</div>
+				</div>
+				<div class="col s6 m4 l4">
+					<div class="card hoverable">
+						<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="/images/CV.png" alt="Basic pastel CV"></div>
+						<div class="card-content">
+							<ul>
+								<li>
+									<span class="card-title activator grey-text text-darken-4">Basic Pastel CV</span> 
+									<button> <i class="heart material-icons right">favorite_border</i></button>
+									<p class="activator">More info<i class=" activator hoverable material-icons left">keyboard_arrow_down</i></p> 
+								</li>
+							</ul>
+						</div>
+						<div class="card-reveal">
+							<ul>
+								<li><span class="card-title grey-text text-darken-4">Basic Pastel CV<i class="material-icons right">close</i></span></li>
+								<p>This basic pastel templaye is perfect for young professional wanting to into industry and stand out. This template is for Microsoft Word. </p>
+								<a href="/pdf/CV.docx" download><button class="downloadbtn"><i class="material-icons"> file_download</i></button></a> 
+							</ul> 
+						</div>
+					</div>
+				</div>
+				<div class="col s6 m4 l4">
+					<div class="card hoverable">
+						<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="/images/CV3.png" alt="Minimalistic CV"></div>
+						<div class="card-content">
+							<ul>
+								<li>
+									<span class="card-title activator grey-text text-darken-4">Minimalistic CV</span> 
+									<button><i class=" heart material-icons right">favorite_border</i></button>
+									<p class="activator">More info<i class=" activator hoverable material-icons left">keyboard_arrow_down</i></p> 
+								</li>
+							</ul>
+						</div>
+						<div class="card-reveal">
+							<ul>
+								<li> <span class="card-title grey-text text-darken-4">Minimalistic CV<i class="material-icons right">close</i></span></li>
+								<p>This template is for Microsoft Word. The minimalistic design communicates organisation and simplicity</p>
+								<a href="/pdf/CV3.docx" download><button class="downloadbtn"><i class="material-icons"> file_download</i></button></a> 
+							</ul>
+						</div>
+					</div> 
+				</div>
+				<div class="col s6 m4 l4">
+					<div class="card hoverable">
+						<div class="card-image waves-effect waves-block waves-light"><img class="activator" src="/images/CV2.png" alt="Basic pastel CV"></div>
+						<div class="card-content">
+							<ul>
+								<li>
+									<span class="card-title activator grey-text text-darken-4">Basic Pastel CV</span> 
+									<button><i class=" heart material-icons right">favorite_border</i></button>
+									<p class="activator">More info<i class=" activator hoverable material-icons left">keyboard_arrow_down</i></p> 
+								</li>
+							</ul>
+						</div>
+						<div class="card-reveal">
+							<ul>
+								<li> <span class="card-title grey-text text-darken-4">Basic Pastel CV<i class="material-icons right">close</i></span></li>
+								<p>This template is great for young creative wanting to go into indusrty and works best in Adobe Acrobat.</p>
+								<a href="/pdf/CV2.docx" download><button class="downloadbtn"><i class="material-icons"> file_download</i></button></a> 
+							</ul> 
+						</div>
+					</div>
+				</div>
+			</div><!---row end-->
+		</div>
+	</div>  
+	<script>
+		function block() {
+		return !(window.event && window.event.keyCode == 13); } //Blocking the enter key from being pressed and resetting page interface. 
+	</script>
+	<script src="/java/all.js">
+	</script>
+	<script src="/java/interface.js">
+	</script>
+	<script src="/pwa.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+	</script>
+	<script async src="https://static.addtoany.com/menu/page.js">
+	</script>
+</body>
+</html>
