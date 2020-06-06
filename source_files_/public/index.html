@@ -16,8 +16,7 @@
 <body>
 	<header>
 		<a class="hide-on-large-only" href="/index.html"><img alt="SOW templates logo" class="small-sc-img" src="/images/sow.png"></a> <!-- Web Share Api share button on small screen -->
-		 <button class="sharebtnsmall"><i class="material-icons right">share</i>
-		<p class="hide-on-med-and-down">Share</p></button>
+		 <button class="sharebtnsmall"><i class="material-icons right">share</i></button>
 	</header><!-- Small & medium screen navigation -->
 	<nav class="nav-bottom hide-on-large-only">
 		<ul>
@@ -33,7 +32,7 @@
 		</ul>
 	</nav><!-- Large screen navigation  -->
 	<nav class="top-nav hide-on-med-and-down">
-		<a href="/index.html"><img class="large-sc-img" src="/images/sow.png"></a>
+		<a href="/index.html"><img class="large-sc-img" alt="SOW templates logo" src="/images/sow.png"></a>
 		<ul class="right" id="fontheight">
 			<li class="current">
 				<a href="/index.html"><i class="material-icons left">home</i></a><a href="/index.html">Home</a>
@@ -74,42 +73,42 @@
 			</div>
 		</div>
   </div>
-  <!-- Web Sahre API HTML -->
+  <!-- Web Share API HTML -->
 	<div class="overlay"></div>
 	<div class="share">
 		<h2>Show us off to your friends</h2><!-- sharer.js code source: https://ellisonleao.github.io/sharer.js/ -->
     	<button class="button social1" data-hashtag="SOW" data-sharer="facebook" data-url="https://sow-templates.web.app">Share on Facebook</button> 
-		<button class="button social2" data-hashtags="SOW" data-sharer="twitter" data-title="Sow Templates"data-url="https://sow-templates.web.app">Share on Twitter</button>
+		<button class="button social2" data-hashtags="SOW" data-sharer="twitter" data-title="Sow Templates" data-url="https://sow-templates.web.app">Share on Twitter</button>
 		<button class="button social3" data-sharer="linkedin" data-url="https://sow-templates.web.app">Share on Linkedin</button>
 	</div>
 	<!-- Javascript for Web Sahre API, placed at the bottom of the body tag to improve display speed -->
-	<!-- Source: https://w3c.github.io/web-share/ & -->
+	<!-- Source: https://w3c.github.io/web-share/ -->
 	<script>
 	const shareButton = document.querySelector('button');
 	const overlay = document.querySelector('.overlay');
 	const shareModal = document.querySelector('.share');
-	const title = window.document.title; //getting the title of the current page 
-	const url = window.document.location.href; //getting the url of the current page 
-	shareButton.addEventListener('click', () => { //adds event listener to share button
-		if (navigator.share) { //checks if the device has access to web share api
-			navigator.share({ //Accessing the web share API
+	const title = window.document.title; // Getting the title of the current page.
+	const url = window.document.location.href; // Getting the url of the current page. 
+	shareButton.addEventListener('click', () => { // Adds event listener to share button.
+		if (navigator.share) { // Checks if the device has access to web share api.
+			navigator.share({ // Accessing the Web Share API.
 				title: '${title}',
 				url: 'https://sow-templates.web.app/',
 			}).then(() => {
 				showMessage('Thanks for sharing!');
-			}).catch(console.error); //catches any errors
-		} else { //showing the share options 
+			}).catch(console.error); // Catches any errors.
+		} else { // Showing the share options. 
 			overlay.classList.add('show-share');
 			shareModal.classList.add('show-share');
 		}
 	})
-	//removing the overlay by clicking off 
+	// Removing the overlay by clicking off. 
 	overlay.addEventListener('click', () => {
-		overlay.classList.remove('show-share'); //removes class from share buttons 
-		shareModal.classList.remove('show-share'); //removes class from overlay 
+		overlay.classList.remove('show-share'); // Removes class from share buttons. 
+		shareModal.classList.remove('show-share'); // Removes class from overlay. 
 	})
 	</script>
-	<!-- Linked script fileds -->
+	<!-- Linked script fields -->
 	<script src="/java/all.js">
 	</script>
 	<script src="/pwa.js">
